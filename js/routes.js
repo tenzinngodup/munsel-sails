@@ -11,9 +11,9 @@ angular.module('app.routes', [])
   
 
       .state('tabsController.course', {
-    url: '/course',
+    url: '/course/:courseId',
     views: {
-      'tab1': {
+      'tab2': {
         templateUrl: 'templates/course.html',
         controller: 'courseCtrl'
       }
@@ -23,7 +23,7 @@ angular.module('app.routes', [])
   .state('tabsController.week1', {
     url: '/week',
     views: {
-      'tab2': {
+      'tab1': {
         templateUrl: 'templates/week1.html',
         controller: 'week1Ctrl'
       }

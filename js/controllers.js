@@ -5,13 +5,34 @@ angular.module('app.controllers', [])
 // TIP: Access Route Parameters for your page via $stateParams.parameterName
 function ($scope, $stateParams) {
 
-  $scope.course = 
-  { 
+  console.log($stateParams.courseId);
+
+  var data = [  { 
     "name": "week01",
     "audio": "mp3/german01.mp3",
-    "content": "week01 content here",
+    "content": "Week 1 content goes here. This is a very long list. ",
     "title": "Course Week 01"
-  };
+  }, { 
+    "name": "week02",
+    "audio": "mp3/german02.mp3",
+    "content": "Week 2 content goes here. This is a very long list. ",
+    "title": "Course Week 02"
+  },  { 
+    "name": "week03",
+    "audio": "mp3/german03.mp3",
+    "content": "Week 1 content goes here. This is a very long list. ",
+    "title": "Course Week 03"
+  },
+    { 
+    "name": "week04",
+    "audio": "mp3/german04.mp3",
+    "content": "Week 4 content goes here. This is a very long list. ",
+    "title": "Course Week 04"
+  }]
+
+  $scope.course = data[$stateParams.courseId];
+
+  $scope.course.content = $scope.course.content.repeat(40); 
 
 
 }])
