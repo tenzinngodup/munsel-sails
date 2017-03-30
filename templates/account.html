@@ -1,0 +1,41 @@
+  <div ng-controller="accountCtrl as ctrl">
+<ion-view title="Account" id="page4">
+  <ion-content padding="true" class="has-header">
+content
+<!-- <form action="http://locahost:1337/user" method="POST">
+  <script type="text/ng-template"
+    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+    data-key="pk_test_s27DpBgR91EwAxzdOVKjbUxJ"
+    data-amount="999"
+    data-name="Demo Site"
+    data-description="Widget"
+    data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+    data-locale="auto">
+  </script>
+</form> -->
+
+
+        <button stripe-checkout="ctrl.doCheckout"
+            data-key="pk_test_s27DpBgR91EwAxzdOVKjbUxJ"
+            data-name="Subscription Munsel Pronunciation Camp"
+            data-description="Five dollahs!"
+            data-amount="500">
+      Buy
+    </button>
+
+<!--     <form stripe:form="saveCustomer">
+  <fieldset>
+    <input type="text" size="20" data-stripe="number"/>
+    <input type="text" size="4" data-stripe="cvc"/>
+    <input type="text" size="2" data-stripe="exp-month"/>
+    <input type="text" size="4" data-stripe="exp-year"/>
+  </fieldset>
+  <button type="submit">Save</button>
+</form> -->
+
+
+
+</ion-content>
+</ion-view>
+
+</div>
