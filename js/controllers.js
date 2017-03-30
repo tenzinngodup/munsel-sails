@@ -28,9 +28,9 @@ function ($scope, $stateParams) {
     "audio": "mp3/german04.mp3",
     "content": "Week 4 content goes here. This is a very long list. ",
     "title": "Course Week 04"
-  }]
+  }];
 
-  $scope.course = data[$stateParams.courseId];
+  $scope.course = data[parseInt($stateParams.courseId) -1];
 
   $scope.course.content = $scope.course.content.repeat(40); 
 
